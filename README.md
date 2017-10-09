@@ -10,7 +10,7 @@ Dashboard is a front-end demo written in VUE2.0. It features a simple, you can f
 
 ``` bash
 # cd work directory
-cd app
+cd Dashboard
 
 # install dependencies
 npm install
