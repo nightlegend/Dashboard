@@ -4,7 +4,6 @@
 //   https://github.com/webpack/karma-webpack
 
 var webpackConfig = require('../../build/webpack.test.conf')
-var wpack = require('webpack')
 
 module.exports = function (config) {
   config.set({
@@ -15,12 +14,22 @@ module.exports = function (config) {
     browsers: ['PhantomJS'],
     frameworks: ['mocha', 'sinon-chai', 'phantomjs-shim'],
     plugins: [
-      new wpack.ProvidePlugin({
-        'Promise': 'es6-promise'
-      })
+      'karma-webpack',
+      'karma-sourcemap-loader',
+      'karma-spec-reporter',
+      'karma-coverage',
+      'karma-mocha',
+      'karma-phantomjs-launcher',
+      'karma-phantomjs-shim',
+      'karma-sinon-chai',
+      'karma-phantomjs-shim',
+      'es6-promise'
     ],
     reporters: ['spec', 'coverage'],
-    files: ['./index.js'],
+    files: [
+      './node_modules/es6-promise/dist/es6-promise.js',
+      './index.js'
+    ],
     preprocessors: {
       './index.js': ['webpack', 'sourcemap']
     },
