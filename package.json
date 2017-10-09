@@ -9,8 +9,9 @@
     "start": "node build/dev-server.js",
     "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
+    "report-coverage": "codecov --token=:a4d56ddc-96b2-45cd-801b-e728a260ef73",
     "e2e": "node test/e2e/runner.js",
-    "test": "npm run unit",
+    "test": "npm run unit && npm run report-coverage",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
