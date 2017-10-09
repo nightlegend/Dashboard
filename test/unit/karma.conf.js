@@ -14,11 +14,9 @@ module.exports = function (config) {
     browsers: ['PhantomJS'],
     frameworks: ['mocha', 'sinon-chai', 'phantomjs-shim'],
     plugins: [
-      'karma-systemjs',
-      'es6-module-loader',
-      'karma-jasmine',
-      "karma-spec-reporter",
-      "karma-phantomjs-launcher"
+      new webpack.ProvidePlugin({
+        'Promise': 'es6-promise'
+      })
     ],
     reporters: ['spec', 'coverage'],
     files: ['./index.js'],
