@@ -9,7 +9,7 @@
     "start": "node build/dev-server.js",
     "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
-    "report-coverage": "codecov --token=:a4d56ddc-96b2-45cd-801b-e728a260ef73",
+    "report-coverage": "codecov --token=a4d56ddc-96b2-45cd-801b-e728a260ef73",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run report-coverage",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
@@ -35,6 +35,7 @@
     "chai": "^3.5.0",
     "chalk": "^2.0.1",
     "chromedriver": "^2.27.2",
+    "codecov": "^2.3.0",
     "connect-history-api-fallback": "^1.3.0",
     "copy-webpack-plugin": "^4.0.1",
     "cross-env": "^5.0.1",
