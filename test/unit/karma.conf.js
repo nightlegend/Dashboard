@@ -13,6 +13,13 @@ module.exports = function (config) {
     // 2. add it to the `browsers` array below.
     browsers: ['PhantomJS'],
     frameworks: ['mocha', 'sinon-chai', 'phantomjs-shim'],
+    plugins: [
+      'karma-systemjs',
+      'es6-module-loader',
+      'karma-jasmine',
+      "karma-spec-reporter",
+      "karma-phantomjs-launcher"
+    ],
     reporters: ['spec', 'coverage'],
     files: ['./index.js'],
     preprocessors: {
