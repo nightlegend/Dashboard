@@ -21,7 +21,15 @@ var webpackConfig = merge(baseConfig, {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': require('../config/test.env')
-    })
+    }),
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        emitErrors: true
+      }
+    }),
+    new webpack.ProvidePlugin({
+      'Promise': 'es6-promise'
+    }),
   ]
 })
 
