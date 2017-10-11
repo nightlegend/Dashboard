@@ -13,7 +13,7 @@ export const login = async ({userName, password, router}) => {
   post(options).then(function (repos) {
     if (repos.code === 200) {
       router.push(`/home`)
-    } else if (repos.code === 201) {
+    } else {
       alert(repos.Message)
     }
   })
