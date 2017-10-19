@@ -1,4 +1,4 @@
-import {post} from '../utilities/httpHelper.js'
+import {post, get} from '../utilities/httpHelper.js'
 
 export const login = async ({userName, password, router}) => {
   var options = {
@@ -24,4 +24,8 @@ export const login = async ({userName, password, router}) => {
 
 export const register = async ({router}) => {
   router.push(`/register`)
+}
+
+export const test = async () => {
+  get(`http://localhost:8012/`)
 }

@@ -1,0 +1,60 @@
+
+#login-div,
+#register-div {
+  margin: 0 auto;
+  margin-top: 300px;
+  width: 500px;
+}
+
+#login-div-right {
+  width: 300px;
+  float: left;
+}
+
+#login-div-left {
+  width: 200px;
+  float: left;
+}
+
+#form,
+#login-form,
+#register-form {
+  width: 300px;
+  margin: 0 auto;
+  text-align: left;
+  box-shadow: 5px 5px 5px grey;
+  background-color: #fff;
+}
+
+.image{
+  max-width: 100%;
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+  object-fit: scale-down;
+}
+
+.button {
+  float: right;
+  background-color: #008080;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 14px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+input[type=text],
+[type=password],
+[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #008B8B;
+}
