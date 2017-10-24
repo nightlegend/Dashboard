@@ -1,7 +1,7 @@
-import rp from 'request-promise-native'
+import request from 'request-promise-native';
 
-export const get = async url => await rp.get(url)
+export const get = async url => await request.get(url);
 
-export const getApi = async options => await rp(options)
+export const getApi = async options => await request(options);
 
-export const post = async options => await rp(options)
+export const post = async options => await request(options);

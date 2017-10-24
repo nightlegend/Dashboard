@@ -13,7 +13,8 @@ module.exports = {
   extends: 'standard',
   // required to lint *.vue files
   plugins: [
-    'html'
+    // 'html',
+    'vue'
   ],
   // add your custom rules here
   'rules': {
@@ -22,6 +23,11 @@ module.exports = {
     // allow async-await
     'generator-star-spacing': 0,
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    'semi': ['error', 'always'],
+    'comma-dangle': ['error', 'always-multiline'],
+    'brace-style': ['error', 'stroustrup'],
+    // 'vue/attribute-hyphenation': ['error', 'always'],
+    // 'vue/html-quotes': ['error', 'single'],
   }
 }

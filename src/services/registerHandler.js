@@ -1,4 +1,4 @@
-import {post} from '../utilities/httpHelper.js'
+import {post} from '../utilities/httpHelper.js';
 
 export default ({userName, password, email, router}) => {
   var options = {
@@ -7,16 +7,16 @@ export default ({userName, password, email, router}) => {
     body: {
       userName: userName,
       password: password,
-      email: email
+      email: email,
     },
-    json: true
-  }
+    json: true,
+  };
   post(options).then(function (res) {
-    console.log(res)
-    router.push(`/login`)
+    console.log(res);
+    router.push(`/login`);
   })
   .catch(function (err) {
-    console.log(err)
-    return false
-  })
-}
+    console.log(err);
+    return false;
+  });
+};

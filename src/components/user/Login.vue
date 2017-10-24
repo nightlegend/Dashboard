@@ -1,8 +1,5 @@
 <template>
   <div id="login-div">
-    <div>
-      
-    </div>
     <div id="login-div-left">
       <img src="../../assets/david.png" class="image">
     </div>
@@ -23,28 +20,28 @@
 </template>
 
 <script>
-  import '../../assets/css/from.css'
-  import {login, register} from '../../services/loginButtonHandler.js'
+  import '../../assets/css/from.css';
+  import {login, register} from '../../services/loginButtonHandler.js';
   export default {
     name: 'login',
     data () {
       return {
         message: 'Welcome to login..',
         userName: '',
-        password: ''
-      }
+        password: '',
+      };
     },
     methods: {
       loginFun: function () {
         login({
           userName: this.userName,
           password: this.password,
-          router: this.$router
-        })
+          router: this.$router,
+        });
       },
       registerBtn: function () {
-        register({router: this.$router})
-      }
-    }
-  }
+        register({router: this.$router});
+      },
+    },
+  };
 </script>

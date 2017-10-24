@@ -58,3 +58,7 @@ input[type=text],
   border: none;
   border-bottom: 2px solid #008B8B;
 }
+
+h1 {
+    text-shadow: 2px 2px 5px #008B8B;
+}

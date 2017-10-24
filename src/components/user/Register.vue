@@ -23,8 +23,8 @@
 </template>
 
 <script>
-  import '../../assets/css/from.css'
-  import registerHandler from '../../services/registerHandler.js'
+  import '../../assets/css/from.css';
+  import registerHandler from '../../services/registerHandler.js';
   export default {
     name: 'register',
     data () {
@@ -33,8 +33,8 @@
         userName: '',
         password: '',
         email: '',
-        registerStatus: false
-      }
+        registerStatus: false,
+      };
     },
     methods: {
       registerFun: function () {
@@ -42,12 +42,12 @@
           userName: this.userName,
           password: this.password,
           email: this.email,
-          router: this.$router
-        })
+          router: this.$router,
+        });
       },
       loginFun: function () {
-        this.$router.push(`/login`)
-      }
-    }
-  }
+        this.$router.push(`/login`);
+      },
+    },
+  };
 </script>
