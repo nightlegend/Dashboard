@@ -1,4 +1,5 @@
-import {post, get} from '../utilities/httpHelper.js';
+import {post} from '../utilities/httpHelper.js';
+import {store} from '../store/session.js';
 
 export const login = async ({userName, password, router}) => {
   var options = {
@@ -12,6 +13,7 @@ export const login = async ({userName, password, router}) => {
   };
   post(options).then(function (repos) {
     if (repos.code === 200) {
+      store.setMessageAction(userName);
       router.push(`/home`);
     }
     else {
@@ -27,6 +29,6 @@ export const register = async ({router}) => {
   router.push(`/register`);
 };
 
-export const test = async () => {
-  get(`http://localhost:8012/`);
+export const logoutFun = async ({router}) => {
+  router.push(`/login`);
 };

@@ -22,14 +22,14 @@
   width: 300px;
   margin: 0 auto;
   text-align: left;
-  box-shadow: 5px 5px 5px grey;
+  box-shadow: 5px 4px 4px 4px grey;
   background-color: #fff;
 }
 
 .image{
   max-width: 100%;
   -webkit-filter: blur(2px);
-  filter: blur(2px);
+  filter: blur(3px);
   object-fit: scale-down;
 }
 
@@ -61,4 +61,11 @@ input[type=text],
 
 h1 {
     text-shadow: 2px 2px 5px #008B8B;
+}
+
+.col-left{
+  float: left;
+}
+.col-right{
+  float: right;
 }

@@ -1,28 +1,52 @@
 <template>
   <div id="home-div">
-    <div id="">
-      
+    <!-- Header -->
+    <div id="nav-header" class="row">
+      <div class="col-sm-2">
+        <img src="../assets/david.png" class="navbar-brand">
+      </div>
+      <div class="col-sm-offset-10">
+        <div>
+          <div class="gb_Q">
+            <a href="javascript:;" class="gb_P" @click="loginFun">Singin</a>  
+          </div>
+          <div class="gb_Q">
+            <a href="javascript:;" class="gb_P" @click="registerFun">Singup</a>  
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="hello">
-      <h5>{{ msg }}</h5>
-      <button @click="testF">test</button>
+    <!-- Main Content -->
+    <div class="row">
+      <button @click="connectSocketServer">connect</button>
     </div>
   </div>
-  
 </template>
 
 <script>
-import {test} from '../services/loginButtonHandler.js';
+import {logoutFun} from '../services/loginButtonHandler.js';
+import '../assets/css/layout.css';
+import {store} from '../store/session.js';
+import {connection} from '../services/socketio.js';
 export default {
-  name: 'hello',
+  name: 'home',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
+      userName: store.state.userName,
     };
   },
   methods: {
-    testF: function () {
-      test();
+    logoutFun: function () {
+      logoutFun({router: this.$router});
+    },
+    loginFun: function () {
+      console.log('Testing......');
+    },
+    registerFun: function () {
+      console.log('Testing......');
+    },
+    connectSocketServer: function () {
+      connection();
     },
   },
 };
@@ -31,15 +55,16 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 #home-div {
-  position: static;
+  /*position: static;*/
 }
-
-#grad1 {
-  height: 200px;
-  background: red; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(red, yellow); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(red, yellow); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(red, yellow); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(red, yellow); /* Standard syntax (must be last) */
+#nav-header {
+  height:70px;
+  background: white; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(white, white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(white, white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(white, white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(white, white); /* Standard syntax (must be last) */
+  border-radius: 12px;
+  box-shadow: 1px 1px 1px 1px grey;
 }
 </style>
